@@ -10,7 +10,7 @@ let addMovie = (event) => {
     movieTitle.textContent = inputField.value;
     movie.appendChild(movieTitle);
     ul.appendChild(movie);
-
+    inputField.value = " ";
 }
 
 
