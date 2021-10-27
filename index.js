@@ -9,8 +9,16 @@ let addMovie = (event) => {
 
     movieTitle.textContent = inputField.value;
     movie.appendChild(movieTitle);
+    let deleteBtn = document.createElement('button');
+    deleteBtn.textContent = 'X';
+    deleteBtn.addEventListener('click', deleteMovie);
+    movie.appendChild(deleteBtn);
     ul.appendChild(movie);
     inputField.value = " ";
+}
+
+let deleteMovie = event => {
+    event.target.parentNode.remove();
 }
 
 
