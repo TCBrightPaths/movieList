@@ -1,5 +1,5 @@
 //console.log("hello world");
-
+let message = document.querySelector('#message');
 //Callback function
 let addMovie = (event) => {
     event.preventDefault();
@@ -20,10 +20,16 @@ let addMovie = (event) => {
 
 let deleteMovie = event => {
     event.target.parentNode.remove();
+    message.textContent = 'Movie deleted!';
 }
 
 let crossOffMovie = event => {
     event.target.classList.toggle('checked');
+    if (event.target.classList.contains('checked')) {
+        message.textContent = 'Movie watched!';
+    } else {
+        message.textContent = 'Movie added back!'
+    }
 }
 
 
