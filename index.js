@@ -8,6 +8,7 @@ let addMovie = (event) => {
     let movieTitle = document.createElement('span');
 
     movieTitle.textContent = inputField.value;
+    movieTitle.addEventListener('click', crossOffMovie);
     movie.appendChild(movieTitle);
     let deleteBtn = document.createElement('button');
     deleteBtn.textContent = 'X';
@@ -19,6 +20,10 @@ let addMovie = (event) => {
 
 let deleteMovie = event => {
     event.target.parentNode.remove();
+}
+
+let crossOffMovie = event => {
+    event.target.classList.toggle('checked');
 }
 
 
